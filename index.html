@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="portfolioStyle.css">
+</head>
+<body>
+
+    <nav class = "nav">
+        <div class = "authorDiv">
+            <p>KMAO</p>
+        </div>
+
+        <div class = "linksDiv">
+            <a href = "#top"><p class = "links">HOME</p></a>
+            <a href = "#section"><p class = "links">ABOUT ME</p></a>
+            <a href = "iframe.html" target="iframe_a" class = "iframe-class"><p class = "links">REACH OUT</p></a>
+        </div>
+    </nav>
+
+    <iframe class="iframe" name="iframe_a"></iframe>
+
+    <video autoplay muted loop class="bg-video">
+        <source src="pictures/neon-geometry-shapes-moewalls-com.mp4">
+    </video>
+
+    <header class = "headerDiv">
+
+        <div class="image">
+            <img src="pictures/dp-removebg-preview.png">
+        </div>
+
+        <div class = "headerInfo">
+            <p>Hi, </p>
+            <p>I'm <span> Kurt Ouano </span> /> </p>
+            <hr>
+
+            <p class = "hobbies"> Front-End Developer</p>
+            <p class = "semi-colon"> ; </p>
+
+            <div class="animate-text">
+            </div>
+        </div>
+    </header>
+
+    <section class = "section" id = "section" >
+            <div class="self-info">
+                <table>
+                    <tr> 
+                        <th style="color: rgb(255, 70, 85);">NAME: </th>
+                        <td>Kurt Mitchell A. Ouano</td>
+                    </tr>
+
+                    <tr> 
+                        <th style="color: rgb(255, 70, 85);">AGE: </th>
+                        <td>20</td>
+                    </tr>
+
+                    <tr> 
+                        <th style="color: rgb(255, 70, 85);">BIRTHDAY: </th>
+                        <td>Feb 16, 2003</td>
+                    </tr>
+
+                    <tr> 
+                        <th style="color: rgb(255, 70, 85);">ADDRESS: </th>
+                        <td>Lipa City</td>
+                    </tr>
+
+                    <tr> 
+                        <th  style="color: rgb(255, 70, 85);">COURSE: </th>
+                        <td>BS in Computer Science</td>
+                    </tr>
+
+                    <tr> 
+                        <th  style="color: rgb(255, 70, 85);">CAREER GOAL: </th>
+                        <td>To be a Full Stack Developer</td>
+                    </tr>
+                </table>
+
+                <img src="pictures/maxresdefault-removebg-preview.png">
+            </div>
+
+            <div class="info-container">
+                <div class="section-info">
+                    <p class = "skills">Skills</p>
+
+                    <div class = "scroll-info">
+                        <img src = "pictures/icons8-html5.svg">
+                        <img src = "pictures/icons8-css3.svg">
+                        <img src = "pictures/icons8-javascript.svg">
+                        <img src = "pictures/icons8-c.svg">
+                    </div>
+                </div>
+
+                <div class="section-info-right">
+                    <p>A 20 year old 3rd Year Computer Science student from De La Salle Lipa.</p>
+                    <p>On my leisure days, I would always choose to stay indoors to relax such as enjoying movies while eating good food.</p>
+                </div>
+            </div>
+    </section>
+
+    <script>
+
+    let i = 1;
+
+        function hobbiesInterval() {
+                let array = ["Front-End Developer", "UX/UI Designer"];
+
+                setInterval( () => {
+                    document.querySelector('.hobbies').innerHTML = array[i];
+                    i++;
+                        if (i > 1) {
+                            i = 0; 
+                        }
+                }, 3000);
+        };
+        
+        hobbiesInterval();
+
+        const iframe = document.querySelector(".iframe-class");
+        const iframeClass =  document.querySelector(".iframe");
+
+            iframe.addEventListener("click", ()=> {
+                if (iframeClass.style.display === "none" || iframeClass.style.display === "") {
+                    iframeClass.style.border = "2px solid white";
+                    iframeClass.style.display = "block";
+                }
+
+                else if (iframeClass.style.display === "block") {
+                    console.log("world");
+                    iframeClass.style.border = "none";
+                    iframeClass.style.display = "none";
+                }
+            });   
+
+    </script>
+</body>
+</html>

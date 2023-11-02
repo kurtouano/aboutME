@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="portfolioStyle.css">
+</head>
+<body>
+
+    <div class = "section2">
+        <div class="reach-out">
+            <label>Your Name</label><br><br>
+            <input class ="userName" type="text">
+
+            <br><br>
+
+            <label>Your Email</label><br> <br>
+            <input class ="userEmail" type="text">
+        </div>
+
+        <div class = "message">
+            <label>Message</label> <br> <br>
+            <textarea class = "sendMessage" rows="5"></textarea> <br>  <br>
+            <button class = "submit" onclick=
+                "alert(`The Message has been sent to Kurt!`);
+                document.querySelector('.sendMessage').value = '';
+                document.querySelector('.userName').value = '';
+                document.querySelector('.userEmail').value = '';
+                " 
+            
+            > Submit </button>
+            
+        </div>
+    </div>
+    
+
+    <script>
+
+    </script>
+</body>
+</html>
